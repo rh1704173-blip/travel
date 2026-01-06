@@ -492,6 +492,19 @@ footer{
   gap: 30px;
 }
 
+@media (max-width: 600px) {
+    .footer-btn {
+        padding: 6px 9px;
+        font-size: 9px;
+        width: 50%; /* Shows two buttons per row */
+    }
+}
+.footer-social a {
+    padding: 6px 9px;
+    font-size: 12px;
+}
+
+
 .footer-about,
 .footer-links,
 .footer-contact {
@@ -699,3 +712,4 @@ footer a {
     }
 
 }
+
