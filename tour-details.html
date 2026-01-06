@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tour Details | TravelPro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:Poppins;background:#f4f6f8}
+header{background:#0b3c5d;padding:15px 60px;color:#fff}
+.hero{height:50vh;background-size:cover;background-position:center;
+display:flex;align-items:center;justify-content:center;color:#fff}
+.hero h1{background:rgba(0,0,0,.6);padding:15px 25px;border-radius:10px}
+
+section{max-width:1100px;margin:auto;padding:60px}
+.box{background:#fff;padding:25px;border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);margin-bottom:30px}
+
+h2{color:#0b3c5d}
+
+/* GALLERY */
+.gallery{display:flex;gap:15px;overflow-x:auto}
+.gallery img{height:160px;border-radius:10px;cursor:pointer}
+
+/* FORM */
+form input,form textarea{
+width:100%;padding:12px;margin-bottom:15px;
+border-radius:8px;border:1px solid #ccc
+}
+
+.btn{
+background:#f4b41a;border:none;padding:12px 22px;
+border-radius:25px;font-weight:600;cursor:pointer
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>MayyariTravel</h1>
+
+  <!-- Hamburger for mobile -->
+  <div class="hamburger" id="hamburger">
+    &#9776;
+  </div>
+
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="tours.html">Tours</a>
+    <a href="destination.html">Destinations</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="btn">Contact</a>
+  </nav>
+</header>
+
+<div class="hero" id="hero">
+<h1 id="tourTitle"></h1>
+</div>
+
+<section>
+
+<!-- OVERVIEW -->
+<div class="box">
+<h2>Tour Overview</h2>
+<p id="overview"></p>
+</div>
+
+<!-- GALLERY -->
+<div class="box">
+<h2>Gallery</h2>
+<div class="gallery" id="gallery"></div>
+</div>
+
+<!-- ITINERARY -->
+<div class="box">
+<h2>Day Wise Itinerary</h2>
+<ul id="itinerary"></ul>
+</div>
+
+<!-- PRICE -->
+<div class="box">
+<h2>Price</h2>
+<h3 id="price"></h3>
+<a href="https://wa.me/923490481896" class="btn">Book on WhatsApp</a>
+</div>
+
+<!-- BOOKING FORM -->
+<div class="box">
+<h2>Booking Inquiry</h2>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Email" required>
+<input type="tel" placeholder="Phone / WhatsApp" required>
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button class="btn" type="submit">Submit Inquiry</button>
+</form>
+</div>
+
+</section>
+
+<script>
+/* DYNAMIC TOUR DATA */
+const tours = {
+  dubai: {
+    title: "Dubai Luxury Tour",
+    hero: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    overview: "Explore Dubai’s luxury lifestyle, desert safari, skyscrapers and world-class attractions in this premium package.",
+    price: "$799 per person",
+    itinerary: [
+      "Arrival & Hotel Check-in",
+      "Dubai City Tour",
+      "Desert Safari with BBQ Dinner",
+      "Burj Khalifa & Shopping",
+      "Departure"
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1526481280691-9069b0d2d6b2",
+      "https://images.unsplash.com/photo-1548013146-72479768bada",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+    ]
+  }
+};
+
+/* LOAD TOUR */
+const tour = tours.dubai;
+document.getElementById("tourTitle").innerText = tour.title;
+document.getElementById("hero").style.backgroundImage = `url(${tour.hero})`;
+document.getElementById("overview").innerText = tour.overview;
+document.getElementById("price").innerText = tour.price;
+
+/* ITINERARY */
+tour.itinerary.forEach(day=>{
+  document.getElementById("itinerary").innerHTML += `<li>${day}</li>`;
+});
+
+/* GALLERY */
+tour.images.forEach(img=>{
+  document.getElementById("gallery").innerHTML += `<img src="${img}">`;
+});
+</script>
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    if(navMenu.style.display === "flex"){
+        navMenu.style.display = "none";
+    } else {
+        navMenu.style.display = "flex";
+    }
+});
+</script>
+
+</body>
+</html>

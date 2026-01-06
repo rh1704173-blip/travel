@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tours | MayyariTravel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+  <h1> <span style="color: aqua;">MayyariTravel</span></h1>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="tours.html">Tours</a>
+    <a href="destination.html">Destinations</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="btn">Contact</a>
+  </nav>
+</header>
+
+<!-- ===== Page Header ===== -->
+<div class="page-header-travel">
+  <h2>Our Tour Packages</h2><br>
+
+</div>
+
+<section>
+<div class="grid">
+
+<!-- ===== TOUR CARD TEMPLATE START ===== -->
+
+<div class="card">
+  <img src="images/tormik.jpeg" alt="Hunza">
+  <div class="card-content">
+    <h3>Hunza Valley Tour</h3>
+    <p>Mountains, lakes & culture</p>
+    <button class="btn" onclick="toggleDetails('hunza')">View Details</button>
+
+    <div class="tour-details" id="hunza">
+      <p>Explore Attabad Lake, Passu Cones, Baltit & Altit Fort with breathtaking views.</p>
+      <ul>
+        <li>⏱ 5 Days / 4 Nights</li>
+        <li>💰 PKR 65,000 / person</li>
+        <li>⭐ Rating: 4.9 (120 Reviews)</li>
+      </ul>
+      <a class="btn" target="_blank"
+      href="https://wa.me/923490481896">
+      Book Now on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/image2.jpeg" alt="Skardu">
+  <div class="card-content">
+    <h3>Skardu Adventure Tour</h3>
+    <p>Lakes, deserts & peaks</p>
+    <button class="btn" onclick="toggleDetails('skardu')">View Details</button>
+
+    <div class="tour-details" id="skardu">
+      <p>Visit Shangrila Lake, Upper Kachura, Shigar Fort & Deosai Plains.</p>
+      <ul>
+        <li>⏱ 6 Days / 5 Nights</li>
+        <li>💰 PKR 75,000 / person</li>
+        <li>⭐ Rating: 4.8 (98 Reviews)</li>
+      </ul>
+      <a class="btn" target="_blank"
+      href="https://wa.me/923490481896">
+      Book Now on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/image3.jpeg" alt="Naran">
+  <div class="card-content">
+    <h3>Naran Kaghan Tour</h3>
+    <p>Lakes & lush valleys</p>
+    <button class="btn" onclick="toggleDetails('naran')">View Details</button>
+
+    <div class="tour-details" id="naran">
+      <p>Includes Saif-ul-Malook Lake, Babusar Pass & Lulusar Lake.</p>
+      <ul>
+        <li>⏱ 4 Days / 3 Nights</li>
+        <li>💰 PKR 45,000 / person</li>
+        <li>⭐ Rating: 4.7 (85 Reviews)</li>
+      </ul>
+      <a class="btn" target="_blank"
+      href="https://wa.me/923490481896?text=I%20want%20to%20book%20Naran%20Tour">
+      Book Now on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/image1.jpeg" alt="Fairy Meadows">
+  <div class="card-content">
+    <h3>Fairy Meadows Tour</h3>
+    <p>Nanga Parbat views</p>
+    <button class="btn" onclick="toggleDetails('fairy')">View Details</button>
+
+    <div class="tour-details" id="fairy">
+      <p>Jeep ride & trekking to Fairy Meadows near Nanga Parbat.</p>
+      <ul>
+        <li>⏱ 3 Days / 2 Nights</li>
+        <li>💰 PKR 40,000</li>
+        <li>⭐ Rating: 4.9</li>
+      </ul>
+      <a class="btn" target="_blank"
+      href="https://wa.me/923490481896">
+      Book Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ADDITIONAL 8 TOURS ===== -->
+
+  <div class="card"><img src="images/image2.jpeg">
+  <div class="card-content">
+<h3>Deosai Plains Tour</h3><p>Land of giants</p>
+<button class="btn" onclick="toggleDetails('deosai')">View Details</button>
+<div class="tour-details" id="deosai">
+<p>High-altitude plateau with wildlife & Sheosar Lake.</p>
+<ul><li>2 Days</li><li>PKR 30,000</li><li>⭐ 4.8</li></ul>
+<a class="btn" target="_blank" href="https://wa.me/923490481896">
+      Book Now on WhatsApp</a>
+</div></div></div>
+
+<div class="card"><img src="images/image3.jpeg">
+<div class="card-content">
+<h3>Khaplu Valley</h3><p>Peaceful Balti culture</p>
+<button class="btn" onclick="toggleDetails('khaplu')">View Details</button>
+<div class="tour-details" id="khaplu">
+<p>Khaplu Palace, riverside villages & mosques.</p>
+<ul><li>3 Days</li><li>PKR 38,000</li><li>⭐ 4.7</li></ul>
+<a class="btn" target="_blank" href="https://wa.me/923490481896">
+      Book Now on WhatsApp</a>
+</div></div></div>
+
+<div class="card"><img src="images/image4.jpeg">
+<div class="card-content">
+<h3>Shigar Valley</h3><p>Forts & orchards</p>
+<button class="btn" onclick="toggleDetails('shigar')">View Details</button>
+<div class="tour-details" id="shigar">
+<p>Historic Shigar Fort & mountain landscapes.</p>
+<ul><li>2 Days</li><li>PKR 28,000</li><li>⭐ 4.6</li></ul>
+<a class="btn" target="_blank" href="https://wa.me/923490481896">
+      Book Now on WhatsApp</a>
+</div></div></div>
+
+<div class="card"><img src="images/image8.jpeg">
+<div class="card-content">
+<h3>Swat Valley</h3><p>Switzerland of Pakistan</p>
+<button class="btn" onclick="toggleDetails('swat')">View Details</button>
+<div class="tour-details" id="swat">
+<p>Kalam, Malam Jabba & Mahodand Lake.</p>
+<ul><li>4 Days</li><li>PKR 50,000</li><li>⭐ 4.8</li></ul>
+<a class="btn" target="_blank" href="https://wa.me/923490481896">
+      Book Now on WhatsApp</a>
+</div></div></div>
+
+<div class="card"><img src="images/image7.jpeg">
+<div class="card-content">
+<h3>Neelum Valley</h3><p>Rivers & waterfalls</p>
+<button class="btn" onclick="toggleDetails('neelum')">View Details</button>
+<div class="tour-details" id="neelum">
+<p>Arang Kel, Keran & Sharda.</p>
+<ul><li>4 Days</li><li>PKR 48,000</li><li>⭐ 4.7</li></ul>
+<a class="btn" target="_blank" href="https://wa.me/923490481896">
+      Book Now on WhatsApp</a>
+</div></div></div>
+
+<div class="card"><img src="images/image6.jpeg">
+<div class="card-content">
+<h3>Murree Tour</h3><p>Family getaway</p>
+<button class="btn" onclick="toggleDetails('murree')">View Details</button>
+<div class="tour-details" id="murree">
+<p>Mall Road & Patriata chairlift.</p>
+<ul><li>2 Days</li><li>PKR 25,000</li><li>⭐ 4.5</li></ul>
+<a class="btn" target="_blank" href="https://wa.me/923490481896">
+      Book Now on WhatsApp</a>
+</div></div></div>
+
+<div class="card"><img src="images/image3.jpeg">
+<div class="card-content">
+<h3>Chitral & Kalash</h3><p>Culture & festivals</p>
+<button class="btn" onclick="toggleDetails('kalash')">View Details</button>
+<div class="tour-details" id="kalash">
+<p>Kalash culture & Chitral Valley.</p>
+<ul><li>5 Days</li><li>PKR 70,000</li><li>⭐ 4.9</li></ul>
+<a class="btn" target="_blank" href="https://wa.me/923490481896">Book Now on WhatsApp</a>
+</div></div></div>
+
+</div>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <!-- About Section -->
+    <div class="footer-about">
+      <h3 style="color: aqua;"> <a href="index.html">MayyariTravel</a></h3>
+      <p>
+        Explore the world with us. Trusted travel agency for adventure, leisure,
+        and cultural tours across Pakistan and beyond.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Most Searched -->
+    <div class="footer-links">
+      <h4 style="color: white;">Most Searched</h4>
+      <ul>
+        <li><a href="tours.html">Skardu Tour</a></li>
+        <li><a href="tours.html">Hunza Valley</a></li>
+        <li><a href="tours.html">Tormik</a></li>
+        <li><a href="tours.html">Shigar</a></li>
+        <li><a href="tours.html">Kachura</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>🏢 Gamba Skardu, Skardu, Pakistan</p>
+      <p>📞 <a href="tel:+923490481896">+92 349 0481896</a></p>
+      <p>✉ <a href="mailto:info@mayyaritravel.com">info@mayyaritravel.com</a></p>
+    </div>
+
+  </div>
+
+  <!-- Social Icons -->
+  <div class="footer-social">
+    <a href="https://www.instagram.com/rashidhussain5277?igsh=YzljYTk1ODg3Zg==" target="_blank">Instagram</a>
+    <a href="https://wa.me/923490481896" target="_blank">WhatsApp</a>
+    <a href="https://www.tiktok.com/@codewithme15?_t=ZS-9068WMvnbHE&_r=1" target="_blank">TikTok</a>
+    <a href="https://www.facebook.com/profile.php?id=61581694103625" target="_blank">Facebook</a>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="footer-bottom">
+    <p>© 2026 MayyariTravel. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/923490481896?text=Hi%20MayyariTravel!%20I%20want%20to%20know%20more%20about%20your%20tour%20packages." 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon" alt="WhatsApp Chat">
+</a>
+<script>
+const hamburger=document.getElementById("hamburger");
+const navMenu=document.getElementById("navMenu");
+hamburger.onclick=()=>navMenu.style.display=navMenu.style.display==="flex"?"none":"flex";
+
+function toggleDetails(id){
+document.querySelectorAll(".tour-details").forEach(d=>{
+if(d.id!==id)d.style.display="none";
+});
+const el=document.getElementById(id);
+el.style.display=el.style.display==="block"?"none":"block";
+}
+</script>
+
+</body>
+</html>

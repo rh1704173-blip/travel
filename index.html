@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MayyariTravel | Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+  <h1> <span style="color: aqua;">MayyariTravel</span></h1>
+
+  <!-- Hamburger for mobile -->
+  <div class="hamburger" id="hamburger">
+    &#9776;
+  </div>
+
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="tours.html">Tours</a>
+    <a href="destination.html">Destinations</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="btn">Contact</a>
+  </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<div class="hero">
+<h1>Explore the World with <span style="color: aqua;">MayyariTravel</span></h1>
+<!-- Search Form -->
+<div class="search-form">
+<select id="destination">
+<option value="">Select Destination</option>
+<option value="Dubai">Roundu</option>
+<option value="Turkey">Shigar</option>
+<option value="Malaysia">Khapulo</option>
+<option value="Hunza Valley">Hunza Valley</option>
+<option value="Thailand">Kharfocho</option>
+<option value="Paris">Tormik</option>
+<option value="Maldives">Kachura</option>
+<option value="Skardu">Skardu</option>
+<option value="Greece">Chunda</option>
+<option value="Italy">manthokha waterfalls</option>
+<option value="Egypt">Kharmang</option>
+<option value="Nepal">K2</option>
+</select>
+
+<input type="date" id="startDate" placeholder="Select Date" />
+<input type="number" id="travelers" placeholder="No. of Travelers" min="1" value="1"/>
+
+<button onclick="searchTours()">Search Tours</button>
+</div>
+</div>
+
+<!-- Featured Destinations Section -->
+<section>
+<h2>Popular Destinations</h2>
+<div class="grid">
+<div class="card">
+<img src="images/tormik.jpeg">
+<div class="card-content">
+<h3>Tormik</h3>
+<p>Luxury city, desert safari, skyscrapers & shopping.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+
+
+
+<div class="card">
+<img src="images/skardu.jpeg">
+<div class="card-content">
+<h3>skardu</h3>
+<p>Historic cities, beautiful landscapes & culture.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+
+
+<div class="card">
+<img src="images/hunza.jpeg">
+<div class="card-content">
+<h3>Hunza Valley</h3>
+<p>Mountains, lakes & breathtaking views.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+<div class="card">
+<img src="images/image2.jpeg">
+<div class="card-content">
+<h3>Kharmang</h3>
+<p>Beaches, islands, city life & nature.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+
+<div class="card">
+<img src="images/image3.jpeg">
+<div class="card-content">
+<h3>Khapulo</h3>
+<p>Beaches, temples & tropical islands.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+
+<div class="card">
+<img src="images/image4.jpeg">
+<div class="card-content">
+<h3>Chunda</h3>
+<p>The city of love, Eiffel Tower & culture.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+
+<div class="card">
+<img src="images/image5.jpeg">
+<div class="card-content">
+<h3>Shigar</h3>
+<p>White sand beaches & crystal clear waters.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+
+<div class="card">
+<img src="images/image6.jpeg">
+<div class="card-content">
+<h3>Manthokha Waterfalls</h3>
+<p>Mountains, lakes, trekking & adventure.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+
+<div class="card">
+<img src="images/image7.jpeg">
+<div class="card-content">
+<h3>Roundu</h3>
+<p>Ancient history, islands & Mediterranean charm.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+
+<div class="card">
+<img src="images/image3.jpeg">
+<div class="card-content">
+<h3>Hunza</h3>
+<p>Art, culture, history & delicious cuisine.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+
+<div class="card">
+<img src="images/image1.jpeg">
+<div class="card-content">
+<h3>Kharfocho</h3>
+<p>Pyramids, Nile river cruises & desert adventures.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+
+<div class="card">
+<img src="images/image2.jpeg">
+<div class="card-content">
+<h3>k2</h3>
+<p>Mountains, trekking, culture & adventure sports.</p>
+<a href="tours.html" class="btn">View Tours</a>
+</div>
+</div>
+
+</div>
+</section>
+<!-- ===== GALLERY SECTION ===== -->
+<section class="gallery-section">
+  <h2>Our Travel Gallery</h2>
+  <p class="subtitle">Experience breathtaking moments from our tours</p>
+
+  <div class="gallery-slider" id="gallerySlider">
+    <div class="gallery-track">
+
+      <!-- Gallery Image 1 -->
+      <div class="gallery-card">
+        <img src="images/image4.jpeg" alt="Hunza Valley">
+      </div>
+
+      <!-- Gallery Image 2 -->
+      <div class="gallery-card">
+        <img src="images/image2.jpeg" alt="Skardu">
+      </div>
+
+      <!-- Gallery Image 3 -->
+      <div class="gallery-card">
+        <img src="images/image3.jpeg" alt="Turkey">
+      </div>
+
+      <!-- Gallery Image 4 -->
+      <div class="gallery-card">
+        <img src="images/image4.jpeg" alt="Malaysia">
+      </div>
+
+      <!-- Gallery Image 5 -->
+      <div class="gallery-card">
+        <img src="images/image5.jpeg" alt="Thailand">
+      </div>
+
+      <!-- Gallery Image 6 -->
+      <div class="gallery-card">
+        <img src="images/image6.jpeg" alt="Paris">
+      </div>
+      <!-- Gallery Image 2 -->
+      <div class="gallery-card">
+        <img src="images/image2.jpeg" alt="Skardu">
+      </div>
+
+      <!-- Gallery Image 3 -->
+      <div class="gallery-card">
+        <img src="images/image3.jpeg" alt="Turkey">
+      </div>
+
+      <!-- Gallery Image 4 -->
+      <div class="gallery-card">
+        <img src="images/image4.jpeg" alt="Malaysia">
+      </div>
+
+ <!-- Gallery Image 1 -->
+      <div class="gallery-card">
+        <img src="images/image4.jpeg" alt="Hunza Valley">
+      </div>
+
+      <!-- Gallery Image 2 -->
+      <div class="gallery-card">
+        <img src="images/image2.jpeg" alt="Skardu">
+      </div>
+
+      <!-- Gallery Image 3 -->
+      <div class="gallery-card">
+        <img src="images/image3.jpeg" alt="Turkey">
+      </div>
+
+      <!-- Gallery Image 4 -->
+      <div class="gallery-card">
+        <img src="images/image4.jpeg" alt="Malaysia">
+      </div>
+
+      <!-- Gallery Image 5 -->
+      <div class="gallery-card">
+        <img src="images/image5.jpeg" alt="Thailand">
+      </div>
+
+      <!-- Gallery Image 6 -->
+      <div class="gallery-card">
+        <img src="images/image6.jpeg" alt="Paris">
+      </div>
+      <!-- Gallery Image 2 -->
+      <div class="gallery-card">
+        <img src="images/image2.jpeg" alt="Skardu">
+      </div>
+
+      <!-- Gallery Image 3 -->
+      <div class="gallery-card">
+        <img src="images/image3.jpeg" alt="Turkey">
+      </div>
+
+      <!-- Gallery Image 4 -->
+      <div class="gallery-card">
+        <img src="images/image4.jpeg" alt="Malaysia">
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Testimonials Slider ===== -->
+<section class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <p class="subtitle">Trusted by happy travelers across Pakistan</p>
+
+  <div class="testimonial-slider">
+    <div class="testimonial-track" id="testimonialTrack">
+
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+        <p>
+          “Our Hunza tour with span MayyariTravel was amazing.
+          Everything was perfectly planned and smooth.”
+        </p>
+        <h4>Ali Khan</h4>
+        <span>Hunza Valley Tour</span>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+        <p>
+          “Skardu was breathtaking and the service was top-class.
+          Highly professional team!”
+        </p>
+        <h4>Sarah Ahmed</h4>
+        <span>Skardu Adventure Tour</span>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Client">
+        <p>
+          “Very reasonable prices and excellent arrangements.
+          Will definitely travel again.”
+        </p>
+        <h4>Usman Raza</h4>
+        <span>Naran Kaghan Tour</span>
+        <div class="stars">★★★★☆</div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Client">
+        <p>
+          “Perfect family tour experience.
+          Hotels and transport were very comfortable.”
+        </p>
+        <h4>Fatima Noor</h4>
+        <span>Murree Family Tour</span>
+        <div class="stars">★★★★★</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="dots" id="testimonialDots"></div>
+</section>
+<footer>
+  <div class="footer-container">
+
+    <!-- About Section -->
+    <div class="footer-about">
+      <h3 style="color: aqua;"> <a href="index.html">MayyariTravel</a></h3>
+      <p>
+        Explore the world with us. Trusted travel agency for adventure, leisure,
+        and cultural tours across Pakistan and beyond.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Most Searched -->
+    <div class="footer-links">
+      <h4 style="color: white;">Most Searched</h4>
+      <ul>
+        <li><a href="tours.html">Skardu Tour</a></li>
+        <li><a href="tours.html">Hunza Valley</a></li>
+        <li><a href="tours.html">Tormik</a></li>
+        <li><a href="tours.html">Shigar</a></li>
+        <li><a href="tours.html">Kachura</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>🏢 Gamba Skardu, Skardu, Pakistan</p>
+      <p>📞 <a href="tel:+923490481896">+92 349 0481896</a></p>
+      <p>✉ <a href="mailto:info@mayyaritravel.com">info@mayyaritravel.com</a></p>
+    </div>
+
+  </div>
+
+  <!-- Social Icons -->
+  <div class="footer-social">
+    <a href="https://www.instagram.com/rashidhussain5277?igsh=YzljYTk1ODg3Zg==" target="_blank">Instagram</a>
+    <a href="https://wa.me/923490481896" target="_blank">WhatsApp</a>
+    <a href="https://www.tiktok.com/@codewithme15?_t=ZS-9068WMvnbHE&_r=1" target="_blank">TikTok</a>
+    <a href="https://www.facebook.com/profile.php?id=61581694103625" target="_blank">Facebook</a>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="footer-bottom">
+    <p>© 2026 MayyariTravel. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/923490481896?text=Hi%20MayyariTravel!%20I%20want%20to%20know%20more%20about%20your%20tour%20packages." 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon" alt="WhatsApp Chat">
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
